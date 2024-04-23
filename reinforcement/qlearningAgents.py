@@ -83,14 +83,15 @@ class QLearningAgent(ReinforcementAgent):
           you should return None.
         """
         "*** YOUR CODE HERE ***"
+        
         def get_final_action(i, legal_actions, final_action=None, max_val=float('-inf')):
           if i >= len(legal_actions):
             return final_action
           q_val = self.values[(state, legal_actions[i])]
           if q_val > max_val:
-            max_val = q_val
-            final_action = legal_actions[i]
+            return get_final_action(i+1, legal_actions, legal_actions[i], q_val)
           return get_final_action(i+1, legal_actions, final_action, max_val)
+        
         return get_final_action(0, self.getLegalActions(state))
           
     def getAction(self, state):
