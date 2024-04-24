@@ -12,7 +12,7 @@ class DeepQNetwork():
         # Remember to set self.learning_rate, self.numTrainingGames,
         # self.parameters, and self.batch_size!
         "*** YOUR CODE HERE ***"
-        # LOOK AT CODE FROM PROJECT 5, should be kinda similar
+        # LOOK AT CODE FROM PROJECT 5 cs188proj5/machinelearning original/models.py, should be kinda similar
         # self.parameters = nn.Parameter()
         # self.learning_rate = 0
         # self.num_training_games = 0
